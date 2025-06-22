@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Style for Optimal Health & Productivity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2E7D32;
+            --accent-color: #8BC34A;
+            --dark-color: #1B5E20;
+            --light-color: #C8E6C9;
+            --text-color: #333;
+            --light-text: #f8f9fa;
+            --gray-color: #6c757d;
+            --white-color: #ffffff;
+            --shadow: 0 4px 6px rgba(96, 22, 22, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 1rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--dark-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-tool {
+            background-color: var(--accent-color);
+            color: var(--white-color);
+        }
+
+        .btn-tool:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-learn {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .btn-learn:hover {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: var(--white-color);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--text-color);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-color);
+            margin: 5px;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--gray-color);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .hero-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Overview Section */
+        .overview {
+            padding: 5rem 0;
+            background-color: var(--white-color);
+        }
+
+        .overview h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .overview-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--white-color);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Medical Tools Section */
+        .medical-tools {
+            padding: 5rem 0;
+            background-color: #f5f5f5;
+        }
+
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .tool-card {
+            display: flex;
+            background-color: var(--white-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-image {
+            flex: 1;
+        }
+
+        .tool-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tool-content {
+            flex: 1;
+            padding: 1.5rem;
+        }
+
+        .tool-content h3 {
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .tool-content p {
+            margin-bottom: 1.5rem;
+            color: var(--gray-color);
+        }
+
+        /* Self Development Section */
+        .self-development {
+            padding: 5rem 0;
+            background-color: var(--white-color);
+        }
+
+        .goals-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .goal-card {
+            background-color: var(--white-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .goal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .goal-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .goal-card h3 {
+            padding: 0 1rem;
+            margin-top: 1rem;
+            color: var(--dark-color);
+        }
+
+        .goal-card p {
+            padding: 0 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-color);
+        }
+
+        .goal-card .btn-learn {
+            margin: 0 1rem 1.5rem;
+        }
+
+        /* Health Information Section */
+        .health-info {
+            padding: 5rem 0;
+            background-color: #f5f5f5;
+        }
+
+        .health-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .health-card {
+            background-color: var(--white-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .health-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .health-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .health-content {
+            padding: 1.5rem;
+        }
+
+        .health-content h3 {
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .health-content p {
+            margin-bottom: 1.5rem;
+            color: var(--gray-color);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background-color: var(--white-color);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+        }
+
+        .contact-details {
+            margin: 2rem 0;
+        }
+
+        .contact-details p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-details i {
+            margin-right: 1rem;
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+        }
+
+        .contact-form {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white-color);
+            padding: 3rem 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo h2 {
+            color: var(--white-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo span {
+            color: var(--accent-color);
+        }
+
+        .footer-logo p {
+            color: var(--light-color);
+        }
+
+        .footer-links h3 {
+            color: var(--white-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--light-color);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-newsletter h3 {
+            color: var(--white-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-newsletter input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-newsletter button {
+            background-color: var(--accent-color);
+            color: var(--white-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .footer-newsletter button:hover {
+            background-color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: var(--white-color);
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--gray-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close:hover {
+            color: var(--dark-color);
+        }
+
+        .modal h2 {
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .modal-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .modal-info {
+            padding-right: 1rem;
+        }
+
+        .modal-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .modal-info p {
+            margin-bottom: 1rem;
+            color: var(--gray-color);
+        }
+
+        .modal-calculator, .modal-checker, .modal-tracker {
+            padding-left: 1rem;
+            border-left: 1px solid #eee;
+        }
+
+        .modal-calculator h3, .modal-checker h3, .modal-tracker h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .result {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .result h4 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 6rem 2rem 4rem;
+            }
+
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .modal-body {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-info {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+
+            .modal-calculator, .modal-checker, .modal-tracker {
+                padding-left: 0;
+                border-left: none;
+                border-top: 1px solid #eee;
+                padding-top: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: var(--white-color);
+                width: 100%;
+                text-align: center;
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+                padding: 2rem 0;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .burger.active .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .burger.active .line2 {
+                opacity: 0;
+            }
+
+            .burger.active .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .tool-card {
+                flex-direction: column;
+            }
+
+            .tool-image {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .modal-content {
+                width: 95%;
+                padding: 1.5rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><span>Vital</span>Life</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#medical-tools">Medical Tools</a></li>
+            <li><a href="#self-development">Self Development</a></li>
+            <li><a href="#health-info">Health Information</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content fade-in">
+            <h1>Transform Your Life Through Optimal Health</h1>
+            <p>Discover the path to peak productivity and wellbeing through balanced lifestyle choices</p>
+            <div class="cta-buttons">
+                <a href="#medical-tools" class="btn-primary">Explore Tools</a>
+                <a href="#health-info" class="btn-secondary">Learn About Health</a>
+            </div>
+        </div>
+        <div class="hero-image fade-in delay-1">
+            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352" alt="Healthy lifestyle">
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview">
+        <h2 class="fade-in">Why Health Matters</h2>
+        <div class="overview-cards">
+            <div class="card fade-in delay-1">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Physical Wellbeing</h3>
+                <p>A healthy body supports a sharp mind and sustained energy levels throughout your day.</p>
+            </div>
+            <div class="card fade-in delay-2">
+                <i class="fas fa-brain"></i>
+                <h3>Mental Clarity</h3>
+                <p>Proper nutrition and exercise enhance cognitive function and decision-making abilities.</p>
+            </div>
+            <div class="card fade-in delay-3">
+                <i class="fas fa-chart-line"></i>
+                <h3>Productivity Boost</h3>
+                <p>Healthy habits can increase your work output by up to 20% while reducing fatigue.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Tools Section -->
+    <section id="medical-tools" class="medical-tools">
+        <h2>Online Medical Essentials</h2>
+        <div class="tools-container">
+            <!-- BMI Calculator -->
+            <div class="tool-card">
+                <div class="tool-image">
+                    <img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15" alt="BMI measurement">
+                </div>
+                <div class="tool-content">
+                    <h3>BMI Calculator</h3>
+                    <p>Body Mass Index (BMI) is a valuable indicator of healthy weight range. Maintaining a healthy BMI reduces risk of chronic diseases and improves overall quality of life.</p>
+                    <button class="btn-tool" onclick="openModal('bmi-modal')">Calculate Your BMI</button>
+                </div>
+            </div>
+            
+            <!-- Symptom Checker -->
+            <div class="tool-card">
+                <div class="tool-image">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef" alt="Doctor checking symptoms">
+                </div>
+                <div class="tool-content">
+                    <h3>Symptom Checker</h3>
+                    <p>Our symptom checker helps you understand potential causes for your symptoms and when to seek medical attention. Remember, this doesn't replace professional diagnosis.</p>
+                    <button class="btn-tool" onclick="openModal('symptom-modal')">Check Symptoms</button>
+                </div>
+            </div>
+            
+            <!-- Calorie Tracker -->
+            <div class="tool-card">
+                <div class="tool-image">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Healthy food">
+                </div>
+                <div class="tool-content">
+                    <h3>Calorie Intake Tracker</h3>
+                    <p>Tracking your daily calorie intake helps maintain energy balance. Whether your goal is weight loss, maintenance, or gain, understanding your needs is the first step.</p>
+                    <button class="btn-tool" onclick="openModal('calorie-modal')">Track Calories</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Self Development Section -->
+    <section id="self-development" class="self-development">
+        <h2>Self Development Goals</h2>
+        <div class="goals-container">
+            <div class="goal-card">
+                <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597" alt="Morning routine">
+                <h3>Morning Routine</h3>
+                <p>Establish a powerful morning routine to set the tone for a productive day.</p>
+                <a href="#" class="btn-learn">Learn More</a>
+            </div>
+            <div class="goal-card">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b" alt="Exercise">
+                <h3>Fitness Milestones</h3>
+                <p>Set achievable fitness goals to progressively improve your health.</p>
+                <a href="#" class="btn-learn">Learn More</a>
+            </div>
+            <div class="goal-card">
+                <img src="https://images.unsplash.com/photo-1491841573634-28140fc7ced7" alt="Mindfulness">
+                <h3>Mindfulness Practice</h3>
+                <p>Develop mindfulness techniques to reduce stress and enhance focus.</p>
+                <a href="#" class="btn-learn">Learn More</a>
+            </div>
+            <div class="goal-card">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" alt="Time management">
+                <h3>Time Management</h3>
+                <p>Master your schedule to maximize productivity and free time.</p>
+                <a href="#" class="btn-learn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Information Section -->
+    <section id="health-info" class="health-info">
+        <h2>Dimensions of Health</h2>
+        <div class="health-container">
+            <div class="health-card">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" alt="Physical health">
+                <div class="health-content">
+                    <h3>Physical Health</h3>
+                    <p>Learn about nutrition, exercise, sleep, and preventive care for optimal physical wellbeing.</p>
+                    <a href="#" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+            <div class="health-card">
+                <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721" alt="Mental health">
+                <div class="health-content">
+                    <h3>Mental Health</h3>
+                    <p>Understand cognitive health, stress management, and maintaining brain function.</p>
+                    <a href="#" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+            <div class="health-card">
+                <img src="https://images.unsplash.com/photo-1498758536662-35b82cd15e29" alt="Emotional health">
+                <div class="health-content">
+                    <h3>Emotional Health</h3>
+                    <p>Develop emotional intelligence and resilience for better relationships and self-awareness.</p>
+                    <a href="#" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+            <div class="health-card">
+                <img src="https://images.unsplash.com/photo-1516589091380-5d6017736b1a" alt="Spiritual health">
+                <div class="health-content">
+                    <h3>Spiritual Health</h3>
+                    <p>Explore practices that provide purpose, meaning, and connection beyond the material world.</p>
+                    <a href="#" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+            <div class="health-card">
+                <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564" alt="Environmental health">
+                <div class="health-content">
+                    <h3>Environmental Health</h3>
+                    <p>Discover how your surroundings impact wellbeing and how to create healthier spaces.</p>
+                    <a href="#" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+            <div class="health-card">
+                <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" alt="Social health">
+                <div class="health-content">
+                    <h3>Social Health</h3>
+                    <p>Learn the importance of relationships, community, and social support for overall health.</p>
+                    <a href="#" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Have questions about health and productivity? Reach out to our team of experts.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-envelope"></i> meow@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> TCSC, Thakur Village, Kandivali (East), Mumbai-400101 </p>
+                </div>
+                <!-- <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            -->
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2><span>Vital</span>Life</h2>
+                <p>Your journey to optimal health and productivity starts here.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#medical-tools">Medical Tools</a></li>
+                    <li><a href="#self-development">Self Development</a></li>
+                    <li><a href="#health-info">Health Info</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <!-- <div class="footer-newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        -->
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 VitalLife. All Meow Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Tool Modals -->
+    <div id="bmi-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bmi-modal')">&times;</span>
+            <h2>BMI Calculator</h2>
+            <div class="modal-body">
+                <div class="modal-info">
+                    <h3>Why BMI Matters</h3>
+                    <p>BMI (Body Mass Index) is a simple calculation using a person's height and weight. The formula is BMI = kg/m² where kg is a person's weight in kilograms and m² is their height in meters squared.</p>
+                    <p>A BMI of 18.5 to 24.9 indicates a healthy weight. Below 18.5 is underweight, 25-29.9 is overweight, and 30 or higher indicates obesity.</p>
+                    <p>While BMI is a useful screening tool, it doesn't directly measure body fat or account for muscle mass, age, sex, or ethnicity.</p>
+                </div>
+                <div class="modal-calculator">
+                    <h3>Calculate Your BMI</h3>
+                    <form id="bmi-form">
+                        <div class="form-group">
+                            <label for="height">Height (cm):</label>
+                            <input type="number" id="height" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Weight (kg):</label>
+                            <input type="number" id="weight" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Calculate</button>
+                    </form>
+                    <div id="bmi-result" class="result">
+                        <p>Your BMI: <span id="bmi-value">-</span></p>
+                        <p>Status: <span id="bmi-status">-</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="symptom-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('symptom-modal')">&times;</span>
+            <h2>Symptom Checker</h2>
+            <div class="modal-body">
+                <div class="modal-info">
+                    <h3>Understanding Symptoms</h3>
+                    <p>Symptoms are your body's way of signaling that something might be wrong. While many symptoms are minor and temporary, some may indicate more serious conditions that require medical attention.</p>
+                    <p>This tool helps you assess your symptoms but is not a substitute for professional medical advice, diagnosis, or treatment.</p>
+                </div>
+                <div class="modal-checker">
+                    <h3>Check Your Symptoms</h3>
+                    <form id="symptom-form">
+                        <div class="form-group">
+                            <label for="symptoms">Enter your symptoms (comma separated):</label>
+                            <textarea id="symptoms" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Duration of symptoms:</label>
+                            <select id="duration" required>
+                                <option value="">Select duration</option>
+                                <option value="less-than-day">Less than a day</option>
+                                <option value="1-3-days">1-3 days</option>
+                                <option value="4-7-days">4-7 days</option>
+                                <option value="1-2-weeks">1-2 weeks</option>
+                                <option value="more-than-2-weeks">More than 2 weeks</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Check Symptoms</button>
+                    </form>
+                    <div id="symptom-result" class="result">
+                        <h4>Possible Conditions:</h4>
+                        <p id="possible-conditions">-</p>
+                        <h4>Recommended Action:</h4>
+                        <p id="recommended-action">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="calorie-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('calorie-modal')">&times;</span>
+            <h2>Calorie Intake Tracker</h2>
+            <div class="modal-body">
+                <div class="modal-info">
+                    <h3>About Calorie Tracking</h3>
+                    <p>Calories are units of energy that our bodies use to function. The number of calories you need depends on factors like age, sex, weight, height, and activity level.</p>
+                    <p>To maintain weight, you need to balance calories consumed with calories burned. To lose weight, you need a calorie deficit, and to gain weight, a calorie surplus.</p>
+                    <p>This calculator estimates your daily calorie needs based on your personal information and goals.</p>
+                </div>
+                <div class="modal-tracker">
+                    <h3>Calculate Your Daily Needs</h3>
+                    <form id="calorie-form">
+                        <div class="form-group">
+                            <label for="age">Age:</label>
+                            <input type="number" id="age" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender:</label>
+                            <select id="gender" required>
+                                <option value="">Select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="height-cm">Height (cm):</label>
+                            <input type="number" id="height-cm" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="weight-kg">Weight (kg):</label>
+                            <input type="number" id="weight-kg" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="activity">Activity Level:</label>
+                            <select id="activity" required>
+                                <option value="">Select</option>
+                                <option value="sedentary">Sedentary (little or no exercise)</option>
+                                <option value="light">Lightly active (light exercise 1-3 days/week)</option>
+                                <option value="moderate">Moderately active (moderate exercise 3-5 days/week)</option>
+                                <option value="active">Very active (hard exercise 6-7 days/week)</option>
+                                <option value="extra-active">Extra active (very hard exercise & physical job)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="goal">Goal:</label>
+                            <select id="goal" required>
+                                <option value="">Select</option>
+                                <option value="maintain">Maintain weight</option>
+                                <option value="lose">Lose weight</option>
+                                <option value="gain">Gain weight</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Calculate</button>
+                    </form>
+                    <div id="calorie-result" class="result">
+                        <h4>Your Daily Calorie Needs:</h4>
+                        <p id="calorie-needs">-</p>
+                        <h4>Macronutrient Distribution:</h4>
+                        <p id="macronutrients">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Navigation
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                burger.classList.remove('active');
+            });
+        });
+
+        // Modal Functions
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // BMI Calculator
+        document.getElementById('bmi-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to m
+            const weight = parseFloat(document.getElementById('weight').value);
+            
+            if (height && weight) {
+                const bmi = (weight / (height * height)).toFixed(1);
+                document.getElementById('bmi-value').textContent = bmi;
+                
+                let status;
+                if (bmi < 18.5) {
+                    status = 'Underweight';
+                } else if (bmi >= 18.5 && bmi < 25) {
+                    status = 'Normal weight';
+                } else if (bmi >= 25 && bmi < 30) {
+                    status = 'Overweight';
+                } else {
+                    status = 'Obese';
+                }
+                
+                document.getElementById('bmi-status').textContent = status;
+            }
+        });
+
+        // Symptom Checker (simplified)
+        document.getElementById('symptom-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const symptoms = document.getElementById('symptoms').value.toLowerCase();
+            const duration = document.getElementById('duration').value;
+            
+            // Very basic symptom checking (in a real app, this would be much more sophisticated)
+            let conditions = [];
+            let action = 'Monitor your symptoms and consult a healthcare professional if they persist or worsen.';
+            
+            if (symptoms.includes('fever') && symptoms.includes('cough')) {
+                conditions.push('Possible respiratory infection (cold, flu)');
+                if (duration === '1-3-days') {
+                    action = 'Rest, stay hydrated, and monitor symptoms. Consider consulting a doctor if fever persists beyond 3 days.';
+                }
+            }
+            
+            if (symptoms.includes('headache') && symptoms.includes('nausea')) {
+                conditions.push('Possible migraine or tension headache');
+            }
+            
+            if (symptoms.includes('chest pain')) {
+                conditions.push('Possible heart-related issue (seek immediate medical attention)');
+                action = 'Seek emergency medical attention immediately.';
+            }
+            
+            if (conditions.length === 0) {
+                conditions.push('Not enough information to determine possible conditions');
+            }
+            
+            document.getElementById('possible-conditions').textContent = conditions.join(', ');
+            document.getElementById('recommended-action').textContent = action;
+        });
+
+        // Calorie Calculator
+        document.getElementById('calorie-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const age = parseInt(document.getElementById('age').value);
+            const gender = document.getElementById('gender').value;
+            const height = parseFloat(document.getElementById('height-cm').value);
+            const weight = parseFloat(document.getElementById('weight-kg').value);
+            const activity = document.getElementById('activity').value;
+            const goal = document.getElementById('goal').value;
+            
+            if (age && gender && height && weight && activity && goal) {
+                // Harris-Benedict Equation (simplified)
+                let bmr;
+                if (gender === 'male') {
+                    bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+                } else {
+                    bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+                }
+                
+                // Activity multiplier
+                let activityMultiplier;
+                switch(activity) {
+                    case 'sedentary': activityMultiplier = 1.2; break;
+                    case 'light': activityMultiplier = 1.375; break;
+                    case 'moderate': activityMultiplier = 1.55; break;
+                    case 'active': activityMultiplier = 1.725; break;
+                    case 'extra-active': activityMultiplier = 1.9; break;
+                    default: activityMultiplier = 1.2;
+                }
+                
+                let calories = Math.round(bmr * activityMultiplier);
+                
+                // Adjust for goal
+                switch(goal) {
+                    case 'lose': calories -= 500; break; // 500 calorie deficit for ~1lb/week loss
+                    case 'gain': calories += 500; break; // 500 calorie surplus for ~1lb/week gain
+                }
+                
+                document.getElementById('calorie-needs').textContent = calories + ' calories per day';
+                
+                // Macronutrient distribution (simplified)
+                const protein = Math.round((weight * 2.2) * 4); // 1g per lb of body weight
+                const fat = Math.round((calories * 0.25) / 9); // 25% of calories from fat
+                const carbs = Math.round((calories - protein - (fat * 9)) / 4);
+                
+                document.getElementById('macronutrients').textContent = 
+                    `Protein: ${protein} calories (${Math.round(weight * 2.2)}g), ` +
+                    `Fat: ${fat * 9} calories (${fat}g), ` +
+                    `Carbs: ${carbs * 4} calories (${carbs}g)`;
+            }
+        });
+
+        // Form Submissions
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to our newsletter!');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70, // Adjust for fixed header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Highlight active section in navigation
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
